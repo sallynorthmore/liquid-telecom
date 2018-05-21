@@ -14,21 +14,34 @@
 <body>
   <div id='container'></div>
   <script src="./bodymovin.min.js" type="text/javascript"></script>
-  <script src="./animation.js"></script>
+  <!-- <script src="./animation.js"></script> -->
   <script>
   var animation;
-var container = document.getElementById("container");
-var animData = {
-  container: container,
-  renderer: "svg",
-  loop: true,
-  autoplay: true,
-  rendererSettings: {
-    progressiveLoad: false
-  },
-  path: "test-pulse.json"
-};
-animation = bodymovin.loadAnimation(animData);
+  var container = document.getElementById("container");
+  var animData = {
+    container: container,
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+    rendererSettings: {
+      progressiveLoad: false
+    },
+    path: "test-pulse.json"
+  };
+  animation = bodymovin.loadAnimation(animData);
+  // animation.onComplete(function(){
+  //   console.log("on complete!")
+  // })
+
+  animation.addEventListener('complete', loopPulse)
+  var loopFrames = [[125, 165]];
+
+  function loopPulse() {
+    // animation.playSegments(segments, forceFlag) 
+    // first param is a single array or multiple arrays of two values each(fromFrame,toFrame), 
+    // second param is a boolean for forcing the new segment right away
+    animation.playSegments([180,200],true);
+  }
 </script>
 </body>
 

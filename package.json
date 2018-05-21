@@ -1,0 +1,19 @@
+{
+  "name": "liquid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sallynorthmore/liquid-telecom.git"
+  },
+  "author": "Sally Northmore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sallynorthmore/liquid-telecom/issues"
+  },
+  "homepage": "https://github.com/sallynorthmore/liquid-telecom#readme"
+}
