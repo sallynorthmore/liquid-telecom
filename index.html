@@ -18,7 +18,6 @@
     var animation;
     var button = document.getElementById("button");
     var container = document.getElementById("container");
-    var loopFrames = [[125, 165]];
     var settings = {
       container: container,
       renderer: "svg",
@@ -27,7 +26,7 @@
       rendererSettings: {
         progressiveLoad: false
       },
-      path: "telecom-wip.json"
+      path: "data.json"
     };
 
     // Play animation
@@ -44,7 +43,7 @@
     }
 
     function loopPulse() {
-      animation.playSegments([180,200],true);
+      animation.playSegments([500,550],true);
     }
 
     function replayAnimation() {
